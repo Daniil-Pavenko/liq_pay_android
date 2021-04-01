@@ -1,0 +1,53 @@
+package com.dansdev.liqpayhelper.model
+
+import androidx.annotation.Keep
+import com.google.gson.annotations.SerializedName
+
+@Keep
+data class LiqPayReceipt(
+    @SerializedName("action") val action: String,
+    @SerializedName("payment_id") val payment_id: Int,
+    @SerializedName("status") val status: LiqPayStatus?,
+    @SerializedName("version") val version: Int,
+    @SerializedName("type") val type: String,
+    @SerializedName("paytype") val paytype: String,
+    @SerializedName("public_key") val public_public_key: String,
+    @SerializedName("acq_id") val acq_id: Int,
+    @SerializedName("order_id") val order_id: String,
+    @SerializedName("liqpay_order_id") val liqpay_order_id: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("sender_phone") val senderPhone: String,
+    @SerializedName("sender_first_name") val sender_first_name: String,
+    @SerializedName("sender_last_name") val sender_last_name: String,
+    @SerializedName("sender_card_mask2") val sender_card_mask2: String,
+    @SerializedName("sender_card_bank") val sender_card_bank: String,
+    @SerializedName("sender_card_type") val sender_card_type: String,
+    @SerializedName("sender_card_country") val sender_card_country: Int,
+    @SerializedName("dcc_allowed") val dccAllowed: List<Dcc>,
+    @SerializedName("ip") val ip: String,
+    @SerializedName("card_token") val card_token: String,
+    @SerializedName("amount") val amount: Float,
+    @SerializedName("currency") val currency: String,
+    @SerializedName("sender_commission") val sender_commission: Float,
+    @SerializedName("receiver_commission") val receiver_commission: Float,
+    @SerializedName("agent_commission") val agent_commission: Float,
+    @SerializedName("amount_debit") val amount_debit: Float,
+    @SerializedName("amount_credit") val amount_credit: Float,
+    @SerializedName("commission_debit") val commission_debit: Float,
+    @SerializedName("commission_credit") val commission_credit: Float,
+    @SerializedName("currency_debit") val currency_debit: String,
+    @SerializedName("currency_credit") val currency_credit: String,
+    @SerializedName("sender_bonus") val sender_bonus: Float,
+    @SerializedName("amount_bonus") val amount_bonus: Float,
+    @SerializedName("bonus_type") val bonus_type: String,
+    @SerializedName("bonus_procent") val bonus_procent: Float,
+    @SerializedName("authcode_debit") val authcode_debit: Float,
+    @SerializedName("authcode_credit") val authcode_credit: Float,
+    @SerializedName("rrn_debit") val rrn_debit: Float,
+    @SerializedName("rrn_credit") val rrn_credit: Float,
+    @SerializedName("mpi_eci") val mpi_eci: Int,
+    @SerializedName("is_3ds") val is_3ds: Boolean,
+    @SerializedName("create_date") val create_date: Long,
+    @SerializedName("end_date") val end_date: Long,
+    @SerializedName("transaction_id") val transaction_id: Long
+)

@@ -1,0 +1,3 @@
+rootProject.name = "LiqPayKotlin"
+include ':app'
+include ':liqpayhelper'
